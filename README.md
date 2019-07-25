@@ -4,7 +4,7 @@ Hi there! This is the interview test instruction for Android Developer position 
 ## What you will have to do.
 - You will be given a zip file which can be download from this link www.example.com
 - Open the project with Android Studio.
-- Modify existing files or add new files to build an Android application according to the description below.
+- Modify existing files or add new files to build an Android application according the application description section.
 
 **Note**
 
