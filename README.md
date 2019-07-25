@@ -31,6 +31,8 @@ There are only two endpoinst called in this application.
 
 1. **Pokemon List API** : https://pokeapi.co/api/v2/pokemon
 
+&nbsp;&nbsp;&nbsp;&nbsp;Paginated list of Pokemon
+
 &nbsp;&nbsp;&nbsp;&nbsp;Sample response
 
 ``` {  
