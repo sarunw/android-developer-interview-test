@@ -1,28 +1,47 @@
 # Oozou Android Developer Test
-Hi there! This is the interview test instruction for Android Developer position at Oozou. Please read the instruction carefully. Best of luck!
+Hi there! This is the interview test instruction for Android Developer position at Oozou. Please read the guidance carefully. Best of luck!
 
 ## What you will have to do.
 - You will be given a zip file which can be download from this link www.example.com
 - Open the project with Android Studio.
-- Modify existing files or add new files to build an Android application according the application description section.
+- Modify existing files or add new files to build an Android application according to the application description section.
 
 **Note**
 
-- You are free to do almost anything to the given project to achieve the application according the application description section. You can even delete everyfile we provided and start everything from scratch by yourself.
-- Please use the design patterns and libraries that you think are the best. 
-- Having unit test and ui test are not mandatory but you are highly encourage to do so.
+- Please write the code in a way that demonstrates your current set of skills
+- Please use design pattern and libraries that you think are the best. 
+- You are free to do anything to the given project to achieve the application described in the application description section. You can even delete every file we provided and start everything from scratch by yourself.
+
+**Optional**
+
+- Having unit tests and UI tests are not mandatory, but you are highly encouraged to do so.
+- Any improvements to the project are welcome such as making changes to UI, caching the data, or other improvements you want to add. 
 
 ## Application Desciption: Pokemon Info
 
-This is description of the application that you will have to build.
+This section describes the application that you will have to build.
 
 ### Objective
 
-This application display the list of Pokemon. The user can click the item of the list to see the detail of each pokemon.
+This application displays the list of Pokemons. The user can click on each item of the list to see the detail of each pokemon.
 
 ### Overview
 
 ![ezgif-5-882a372cf276](https://user-images.githubusercontent.com/19642082/61866786-0a595c00-af00-11e9-9225-8b4c044dd8ed.gif)
+
+### Screens
+&nbsp;&nbsp;&nbsp;&nbsp;We will discuss about data and api in detail in the next section. 
+1. **Pokemon List Screen**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Display paginated list from Pokemon List API(https://pokeapi.co/api/v2/pokemon).
+
+![Screen Shot 2019-07-25 at 4 36 42 PM](https://user-images.githubusercontent.com/19642082/61863901-b13af980-aefa-11e9-8a83-f6bb221d6e23.png)
+
+2. **Pokemon Detail Dialog**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Modal style dialog for displaying pokemon detail. This dailog show when the item in Pokemon List screen is clicked. There are only 4 field display in this page `base_experience`, `height`, `name`, `weight`.
+
+![Screen Shot 2019-07-25 at 4 41 51 PM](https://user-images.githubusercontent.com/19642082/61864176-29a1ba80-aefb-11e9-9269-07a6c21aa923.png)
 
 ### Data
 
@@ -98,21 +117,6 @@ There are only two endpoinst called in this application.
    "weight":69
 }
 ```
-
-### Screens
-
-1. **Pokemon List Screen**
-
-&nbsp;&nbsp;&nbsp;&nbsp;Display paginated list from Pokemon List API(https://pokeapi.co/api/v2/pokemon).
-
-![Screen Shot 2019-07-25 at 4 36 42 PM](https://user-images.githubusercontent.com/19642082/61863901-b13af980-aefa-11e9-8a83-f6bb221d6e23.png)
-
-2. **Pokemon Detail Dialog**
-
-&nbsp;&nbsp;&nbsp;&nbsp;Modal style dialog for displaying pokemon detail. This dailog show when the item in Pokemon List screen is clicked. There are only 4 field display in this page `base_experience`, `height`, `name`, `weight`.
-
-![Screen Shot 2019-07-25 at 4 41 51 PM](https://user-images.githubusercontent.com/19642082/61864176-29a1ba80-aefb-11e9-9269-07a6c21aa923.png)
-
 
 ### Further Implementation Guide
 
