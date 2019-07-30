@@ -129,8 +129,8 @@ You don't need to create a layout for **Pokemon List Screen** by yourself. We've
 #### 2. Calling Api ####
 Call this endpoint **https://pokeapi.co/api/v2/pokemon** to get paginated list of Pokemons. Use the fields; `count`, `next`, and `previous` to make the `RecyclerView` load and display the data in the pagination way.
 
-#### 3. Passing URL to Pokemon Detail ####
-Send Pokemon Detail URL from **Pokemon List Screen** to **Pokemon Detail** and use that URL to fetch pokemon detail data.
+#### 3. Passing URL to Pokemon Detail Dialog ####
+Send Pokemon Detail URL from **Pokemon List Screen** to **Pokemon Detail Dialog** and use that URL to fetch pokemon detail data.
 
 <img width="764" alt="Screen Shot 2019-07-25 at 4 57 05 PM" src="https://user-images.githubusercontent.com/19642082/61865404-5eaf0c80-aefd-11e9-8be7-ecc09804bf1a.png">
 
