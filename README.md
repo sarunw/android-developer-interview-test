@@ -30,7 +30,8 @@ This application displays the list of Pokemons. The user can click on each item 
 ![ezgif-5-882a372cf276](https://user-images.githubusercontent.com/19642082/61866786-0a595c00-af00-11e9-9225-8b4c044dd8ed.gif)
 
 ### Screens
-&nbsp;&nbsp;&nbsp;&nbsp;This section describes the behavior and detail of each screen. We will discuss about data and api in detail in the next section. 
+This section describes the behavior and detail of each screen. We will discuss about data and api in detail in the next section. 
+
 #### 1. Pokemon List Screen ####
 Display paginated list from Pokemon List API(https://pokeapi.co/api/v2/pokemon). When clicking on each item in the list, the URL for fetching pokemon detail will be passed to Pokemon detail dialog, and the dialog will be shown.
 
@@ -136,7 +137,7 @@ Send Pokemon Detail URL from **Pokemon List Screen** to **Pokemon Detail** and u
 ### Pokemon Detail ###
 
 #### 1. Create layout XML file and other related files ####
-For Pokemon detail screen, we haven't provided anything yet. Therefore, you will need to create an XML file and other related files by yourself.
+For Pokemon detail screen, we haven't provided anything yet. Therefore, you will need to create an XML file and other related files by yourself. You can decide the dimension of the element in the layout base on your judgement.
 
 #### 2. Calling Api ####
 Call the URL passing from **Pokemon List Screen** to get the pokemon detail data. Then display the data on the UI.
