@@ -2,20 +2,15 @@
 Hi there! This is the interview test instruction for Android Developer position at Oozou. Please read the guidance carefully. Best of luck!
 
 ## What you will have to do.
-- You will be given a zip file which can be download from this link www.example.com .
-- Open the project with Android Studio.
-- Modify existing files or add new files to build an Android application according to the application description section.
+- Use Android studio to build the Android application according to the detail described in the [application description section](https://github.com/oozou/android-developer-interview-test/blob/instruction-revised/README.md#application-desciption-pokemon-info).
+- Use `git` to track your work history.
+- Write the unit tests and UI tests where you think it is necessary.
 
 **Note**
 
 - Please write the code in a way that demonstrates your current set of skills.
 - Please use design pattern and libraries that you think are the best. 
-- You are free to do anything to the given project to achieve the application described in the [application description section](https://github.com/oozou/android-developer-interview-test/blob/instruction-revised/README.md#application-desciption-pokemon-info). You can even delete every file we provided and start everything from scratch by yourself.
-
-**Optional**
-- Using `git` to track your work history is strongly recommened.
-- Having unit tests and UI tests are not mandatory, but you are highly encouraged to do so.
-- Any improvements to the project are welcome such as making changes to UI, caching the data, or other improvements you want to add. 
+- You are free to do anything to the project to achieve the application described in the [application description section](https://github.com/oozou/android-developer-interview-test/blob/instruction-revised/README.md#application-desciption-pokemon-info).
 
 ## Application Desciption: Pokemon Info
 
@@ -85,7 +80,7 @@ Sample response
 #### 2. Pokemon Detail ####
 Use `url` field from item in `results` to get pokemon detail api url.
 
-Please refer to one of the item in `results` of response of the pokemon list endpoint.
+Please refer to one of the item in `results` of response from the pokemon list endpoint.
 ```
 {  
     "name":"bulbasaur",
@@ -94,7 +89,7 @@ Please refer to one of the item in `results` of response of the pokemon list end
 ```
 Call https://pokeapi.co/api/v2/pokemon/1/ to get pokemon detail
 
-Sample response: You only need to map these 4 fields to the model: `base_experience`, `height`, `name`, `weight`
+**Sample response**: You only need to map these 4 fields to the model: `base_experience`, `height`, `name`, `weight`
 
 ``` 
 {  
@@ -119,28 +114,11 @@ Sample response: You only need to map these 4 fields to the model: `base_experie
 ```
 
 ## Implementation Guide 
-You **don't** need to follow this guide strictly.
-
-### Pokemon List Screen ###
-
-#### 1. Set up RecyclerView in `PokemonListFragment.kt` ####
-You don't need to create a layout for **Pokemon List Screen** by yourself. We've provided `pokemon_list_fragment.xml` as the layout of  **Pokemon List Screen**, and the layout for each item in `RecyclerView` is defined in `pokemon_view_holder.xml`. What left for you to do is create new files to get the `RecyclerView` ready for displaying data from API.
-
-#### 2. Calling Api ####
-Call this endpoint **https://pokeapi.co/api/v2/pokemon** to get paginated list of Pokemons. Use the fields; `count`, `next`, and `previous` to make the `RecyclerView` load and display the data in the pagination way.
-
-#### 3. Passing URL to Pokemon Detail Dialog ####
-Send Pokemon Detail URL from **Pokemon List Screen** to **Pokemon Detail Dialog** and use that URL to fetch pokemon detail data.
-
-<img width="764" alt="Screen Shot 2019-07-25 at 4 57 05 PM" src="https://user-images.githubusercontent.com/19642082/61865404-5eaf0c80-aefd-11e9-8be7-ecc09804bf1a.png">
-
-### Pokemon Detail ###
-
-#### 1. Create layout XML file and other related files ####
-For Pokemon detail screen, we haven't provided anything yet. Therefore, you will need to create an XML file and other related files by yourself. You can decide the dimension of the element in the layout base on your judgement.
-
-#### 2. Calling Api ####
-Call the URL passed from **Pokemon List Screen** to get the pokemon detail data. Then display the data on the UI.
+- The following are the color code using in the project.
+    - `<color name="colorPrimary">#F4B400</color>` 
+    - `<color name="colorPrimaryDark">#E19720</color>`
+    - `<color name="colorAccent">#F62D14</color>`
+- The layout doesn't have to be the same as the screenshots. You can decide the dimension of the layouts based on your judgment.
 
 ## Submission
 
