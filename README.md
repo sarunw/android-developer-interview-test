@@ -10,7 +10,7 @@ Hi there! This is the interview test instruction for Android Developer position 
 
 - Please write the code in a way that demonstrates your current set of skills.
 - Please use design pattern and libraries that you think are the best. 
-- You are free to do anything to the given project to achieve the application described in the application description section. You can even delete every file we provided and start everything from scratch by yourself.
+- You are free to do anything to the given project to achieve the application described in the [application description section](https://github.com/oozou/android-developer-interview-test/blob/instruction-revised/README.md#application-desciption-pokemon-info). You can even delete every file we provided and start everything from scratch by yourself.
 
 **Optional**
 - Using `git` to track your work history is strongly recommened.
@@ -33,19 +33,19 @@ This application displays the list of Pokemons. The user can click on each item 
 This section describes the behavior and detail of each screen. We will discuss about data and api in detail in the next section. 
 
 #### 1. Pokemon List Screen ####
-Display paginated list from Pokemon List API(https://pokeapi.co/api/v2/pokemon). When clicking on each item in the list, the URL for fetching pokemon detail will be passed to Pokemon detail dialog, and the dialog will be shown.
+Display paginated list from Pokemon List API(https://pokeapi.co/api/v2/pokemon). When clicking on each item in the list, the Pokemon detail dialog will be shown. Please noted that the URL for fetching pokemon detail will be passed to Pokemon detail dialog from Pokemon List Screen.
 
 ![Screen Shot 2019-07-25 at 4 36 42 PM](https://user-images.githubusercontent.com/19642082/61863901-b13af980-aefa-11e9-8a83-f6bb221d6e23.png)
 
 #### 2. Pokemon Detail Dialog ####
-Modal style dialog for displaying pokemon detail. This dailog show when the item in Pokemon List screen is clicked. There are only 4 field display in this page `base_experience`, `height`, `name`, `weight`.
+This is a dialog for displaying pokemon detail. This dailog show when the item in Pokemon List screen is clicked. There are only 4 field display in this page `base_experience`, `height`, `name`, `weight`.
 
 ![Screen Shot 2019-07-25 at 4 41 51 PM](https://user-images.githubusercontent.com/19642082/61864176-29a1ba80-aefb-11e9-9269-07a6c21aa923.png)
 
 ### Data
 
 The data in this application is fetch from PokéAPI(https://pokeapi.co)
-There are only two endpoinst called in this application.
+There are only two endpoints called in this application.
 
 #### 1. Pokemon List API ####
 https://pokeapi.co/api/v2/pokemon
@@ -140,9 +140,11 @@ Send Pokemon Detail URL from **Pokemon List Screen** to **Pokemon Detail Dialog*
 For Pokemon detail screen, we haven't provided anything yet. Therefore, you will need to create an XML file and other related files by yourself. You can decide the dimension of the element in the layout base on your judgement.
 
 #### 2. Calling Api ####
-Call the URL passing from **Pokemon List Screen** to get the pokemon detail data. Then display the data on the UI.
+Call the URL passed from **Pokemon List Screen** to get the pokemon detail data. Then display the data on the UI.
 
 ## Submission
 
 Please zip the project and send it to this email example@mail.com 
+
+**Do not** upload this project to the version control system such as GitHub, GitLab, or others. 
 
