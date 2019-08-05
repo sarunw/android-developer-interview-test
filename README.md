@@ -122,7 +122,7 @@ Call https://pokeapi.co/api/v2/pokemon/1/ to get pokemon detail
 
 ## Submission
 
-Please zip the project and send it to this email example@mail.com 
+Please zip the project and send it to this email pure@oozou.com
 
 **Do not** upload this project to the version control system such as GitHub, GitLab, or others. 
 
