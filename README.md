@@ -1,40 +1,53 @@
 # Oozou Android Developer Test
-Hi there! This is the interview test instruction for Android Developer position at Oozou. Please read the instruction carefully. Best of luck!
+Hi there! This is the interview test instruction for Android Developer position at Oozou. Please read the guidance carefully. Best of luck!
 
 ## What you will have to do.
-- You will be given a zip file which can be download from this link www.example.com
-- Open the project with Android Studio.
-- Modify existing files or add new files to build an Android application according the application description section.
+- Use Android studio to build the Android application according to the detail described in the [application description section](https://github.com/oozou/android-developer-interview-test/blob/instruction-revised/README.md#application-desciption-pokemon-info).
+- Use `git` to track your work history.
+- Write the unit tests and UI tests where you think it is necessary.
 
 **Note**
 
-- You are free to do almost anything to the given project to achieve the application according the application description section. You can even delete everyfile we provided and start everything from scratch by yourself.
-- Please use the design patterns and libraries that you think are the best. 
-- Having unit test and ui test are not mandatory but you are highly encourage to do so.
+- Please write the code in a way that demonstrates your current set of skills.
+- Please use design pattern and libraries that you think are the best. 
+- You are free to do anything to the project to achieve the application described in the [application description section](https://github.com/oozou/android-developer-interview-test/blob/instruction-revised/README.md#application-desciption-pokemon-info).
 
 ## Application Desciption: Pokemon Info
 
-This is description of the application that you will have to build.
+This section describes the detail of the application that you will have to build.
 
 ### Objective
 
-This application display the list of Pokemon. The user can click the item of the list to see the detail of each pokemon.
+This application displays the list of Pokemons. The user can click on each item of the list to see the detail of each pokemon.
 
 ### Overview
 
 ![ezgif-5-882a372cf276](https://user-images.githubusercontent.com/19642082/61866786-0a595c00-af00-11e9-9225-8b4c044dd8ed.gif)
 
+### Screens
+This section describes the behavior and detail of each screen. We will discuss about data and api in detail in the next section. 
+
+#### 1. Pokemon List Screen ####
+Display paginated list from Pokemon List API(https://pokeapi.co/api/v2/pokemon). When clicking on each item in the list, the Pokemon detail dialog will be shown. Please noted that the URL for fetching pokemon detail will be passed to Pokemon detail dialog from Pokemon List Screen.
+
+![Screen Shot 2019-07-25 at 4 36 42 PM](https://user-images.githubusercontent.com/19642082/61863901-b13af980-aefa-11e9-8a83-f6bb221d6e23.png)
+
+#### 2. Pokemon Detail Dialog ####
+This is a dialog for displaying pokemon detail. This dailog show when the item in Pokemon List screen is clicked. There are only 4 field display in this page `base_experience`, `height`, `name`, `weight`.
+
+![Screen Shot 2019-07-25 at 4 41 51 PM](https://user-images.githubusercontent.com/19642082/61864176-29a1ba80-aefb-11e9-9269-07a6c21aa923.png)
+
 ### Data
 
 The data in this application is fetch from PokéAPI(https://pokeapi.co)
-There are only two endpoinst called in this application.
+There are only two endpoints called in this application.
 
-1. **Pokemon List API** : https://pokeapi.co/api/v2/pokemon
+#### 1. Pokemon List API ####
+https://pokeapi.co/api/v2/pokemon
 
-&nbsp;&nbsp;&nbsp;&nbsp;Paginated list of Pokemon
+Paginated list of Pokemon
 
-&nbsp;&nbsp;&nbsp;&nbsp;Sample response
-
+Sample response
 ``` {  
    "count":964,
    "next":"https://pokeapi.co/api/v2/pokemon?offset=20&limit=20",
@@ -64,18 +77,19 @@ There are only two endpoinst called in this application.
 }
 ```
 
-2. **Pokemon Detail**: Use `url` field from item in `results` to get pokemon detail api url.
+#### 2. Pokemon Detail ####
+Use `url` field from item in `results` to get pokemon detail api url.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Please refer to sample below.
+Please refer to one of the item in `results` of response from the pokemon list endpoint.
 ```
 {  
     "name":"bulbasaur",
     "url":"https://pokeapi.co/api/v2/pokemon/1/"
 }
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;Call https://pokeapi.co/api/v2/pokemon/1/ to get pokemon detail
+Call https://pokeapi.co/api/v2/pokemon/1/ to get pokemon detail
 
-&nbsp;&nbsp;&nbsp;&nbsp;Sample response: You only need to map these 4 fields to the model: `base_experience`, `height`, `name`, `weight`
+**Sample response**: You only need to map these 4 fields to the model: `base_experience`, `height`, `name`, `weight`
 
 ``` 
 {  
@@ -99,23 +113,16 @@ There are only two endpoinst called in this application.
 }
 ```
 
-### Screens
+## Implementation Guide 
+- The following are the color code using in the project.
+    - `<color name="colorPrimary">#F4B400</color>` 
+    - `<color name="colorPrimaryDark">#E19720</color>`
+    - `<color name="colorAccent">#F62D14</color>`
+- The layout doesn't have to be the same as the screenshots. You can decide the dimension of the layouts based on your judgment.
 
-1. **Pokemon List Screen**
+## Submission
 
-&nbsp;&nbsp;&nbsp;&nbsp;Display paginated list from Pokemon List API(https://pokeapi.co/api/v2/pokemon).
+Please zip the project and send it to this email pure@oozou.com
 
-![Screen Shot 2019-07-25 at 4 36 42 PM](https://user-images.githubusercontent.com/19642082/61863901-b13af980-aefa-11e9-8a83-f6bb221d6e23.png)
+**Do not** upload this project to the version control system such as GitHub, GitLab, or others. 
 
-2. **Pokemon Detail Dialog**
-
-&nbsp;&nbsp;&nbsp;&nbsp;Modal style dialog for displaying pokemon detail. This dailog show when the item in Pokemon List screen is clicked. There are only 4 field display in this page `base_experience`, `height`, `name`, `weight`.
-
-![Screen Shot 2019-07-25 at 4 41 51 PM](https://user-images.githubusercontent.com/19642082/61864176-29a1ba80-aefb-11e9-9269-07a6c21aa923.png)
-
-
-### Further Implementation Guide
-
-&nbsp;&nbsp;&nbsp;&nbsp;Send Pokemon Detail url from Pokemon List Screen to Pokemon Detail dialog and use that url to fetch pokemon detail data.
-
-<img width="764" alt="Screen Shot 2019-07-25 at 4 57 05 PM" src="https://user-images.githubusercontent.com/19642082/61865404-5eaf0c80-aefd-11e9-8be7-ecc09804bf1a.png">
